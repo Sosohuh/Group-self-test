@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Google search button</h2>
+
+    <div class="main">
+        <form action="" method="GET" id="search-box">
+            <input type="text" class="textSearch" value="" name="q" size="20" maxlength="120" placeholder="enter temp...">
+            <button class="searchButton">Search</button>
+
+            <script>
+                let textSearch = document.querySelector('.textSearch');
+                let searchButton = document.querySelector('.searchButton')
+
+                searchButton.onclick = function(){
+                    let url = 'https://www.google.com/search?q=' + textSearch.value;
+                    window.open(url,'_self_')
+                }
+            </script>
+        </form>
+    </div>
+    
+</body>
+</html>
